@@ -1,0 +1,246 @@
+:root {
+  --letter-titles: "Lexend Tera", sans-ser;
+}
+
+header {
+  margin-top: 50px;
+}
+
+h1,
+h2 {
+  text-align: center;
+  font-family: var(--letter-titles);
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+h1 {
+  font-weight: 600;
+}
+
+h2 {
+  font-weight: 400;
+}
+
+.title-think {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-size: 2vw;
+  -webkit-text-stroke: 0.1vw #484848;
+  color: white;
+}
+
+.title-think::before {
+  content: "Think";
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #9ca9a1;
+  width: 0;
+  height: 100%;
+  -webkit-text-stroke: 0vw white;
+  border-right: 2px solid #9ca9a1;
+  overflow: hidden;
+  animation: coloured 6s linear infinite;
+}
+
+.title-different::before {
+  content: "different";
+  top: 0;
+  left: 0;
+  color: #9ca9a1;
+  width: 0;
+  height: 100%;
+  -webkit-text-stroke: 0vw white;
+  border-right: 2px solid #9ca9a1;
+  overflow: hidden;
+  animation: coloured 6s linear infinite;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.flex-container {
+  display: flex;
+  margin-top: 80px;
+  gap: 0px 20px;
+}
+
+.content-img-break {
+  width: 1200px;
+  height: 900px;
+  position: relative;
+  background-image: url(images/phone-img-1.jpg);
+  background-size: cover;
+}
+
+.content-img-break span {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  inset: 0;
+  transition: 0.5s;
+  background-image: url(images/phone-img-1.jpg);
+  background-size: cover;
+}
+
+.content-img-break span:nth-child(1) {
+  clip-path: polygon(0 0, 47% 0, 13% 9%, 0 34%);
+}
+
+.content-img-break span:nth-child(2) {
+  clip-path: polygon(67% 0, 100% 0, 100% 35%, 47% 27%);
+}
+
+.content-img-break span:nth-child(3) {
+  clip-path: polygon(28% 80%, 100% 50%, 99% 100%, 68% 100%);
+}
+
+.content-img-break span:nth-child(4) {
+  clip-path: polygon(0 33%, 13% 73%, 38% 88%, 0 100%);
+}
+
+.content-img-break span:nth-child(5) {
+  clip-path: polygon(41% 89%, 41% 89%, 61% 100%, 0 100%);
+}
+
+.content-img-break span:nth-child(6) {
+  clip-path: polygon(3% 30%, 100% 36%, 100% 49%, 20% 76%);
+}
+
+.content-img-break span:nth-child(7) {
+  clip-path: polygon(49% 0, 67% 0, 39% 29%, 10% 29%);
+}
+
+/*Hover effect on break image-----------------------*/
+
+.content-img-break:hover {
+  background-image: none;
+  background-color: white;
+  cursor: pointer;
+}
+
+.content-img-break:hover span:nth-child(1) {
+  transform: translate(-40px, -60px) rotate(-15deg);
+}
+
+.content-img-break:hover span:nth-child(2) {
+  transform: translate(40px, -100px) rotate(25deg);
+}
+
+.content-img-break:hover span:nth-child(2) {
+  transform: translate(40px, -100px) rotate(25deg);
+}
+
+.content-img-break:hover span:nth-child(3) {
+  transform: translate(40px, 60px);
+}
+
+.content-img-break:hover span:nth-child(4) {
+  transform: translate(-40px, 60px);
+}
+
+.content-img-break:hover span:nth-child(5) {
+  transform: translate(-40px, 60px) rotate(-10deg);
+}
+
+.content-img-break:hover span:nth-child(6) {
+  transform: translate(-40px, 60px) rotate(-10deg);
+}
+
+.content-img-break:hover span:nth-child(7) {
+  transform: translate(-40px, 60px) rotate(-10deg);
+}
+/* --------------------------------------------------*/
+.title-break {
+  color: white;
+  position: absolute;
+  left: 15%;
+  bottom: 50%;
+}
+
+.content-img-twist {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.img-bg-twist {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(images/phone-img-2.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: zoom 5s linear infinite;
+  animation-direction: alternate;
+}
+.content-img-twist span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  background-image: url(images/phone-img-2.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: rotate 5s linear infinite;
+  clip-path: circle(29% at 46% 33%);
+}
+
+.title-twist {
+  position: absolute;
+  top: 50%;
+  left: 23%;
+  color: white;
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(1.2);
+  }
+  25% {
+    transform: scale(1.9);
+  }
+
+  50% {
+    transform: scale(2.2);
+  }
+  75% {
+    transform: scale(1.5);
+  }
+}
+
+@keyframes rotate {
+  5% {
+    transform: scale(1.5);
+  }
+
+  25% {
+    transform: scale(1.5) rotate(15deg);
+  }
+
+  50% {
+    transform: scale(1.5) rotate(20deg);
+  }
+
+  75% {
+    transform: scale(1.5);
+  }
+}
+
+@keyframes coloured {
+  0%,
+  10%,
+  100% {
+    width: 0;
+  }
+
+  70%,
+  90% {
+    width: 100%;
+  }
+}
